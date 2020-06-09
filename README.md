@@ -15,37 +15,32 @@ Open source control for Belkin WeMo devices
 
 ## Installation
 
+`ouimeaux` supports both Python 3 and Python 2. To install, run:
+
 ```
-$ sudo pip install virtualenv
-$ mkdir ouimeaux-env
-$ virtualenv ouimeaux-env
+$ pip install git+https://github.com/iancmcc/ouimeaux.git
+```
+
+This will allow you to use `wemo` and `wemo server`.
+
+Note you may wish to isolate your `ouimeaux` installation, to do so, install
+into a virtual environment as follows:
+```
+# If Python 3:
+$ python3 -m venv ouimeaux-env
+
+# If Python 2:
+$ python -m pip install virtualenv
+$ python -m virtualenv ouimeaux-env
+
+# And then:
 $ source ouimeaux-env/bin/activate
-$ cd ouimeaux-env
-$ pip install git+https://github.com/syphoxy/ouimeaux.git
+$ pip install git+https://github.com/iancmcc/ouimeaux.git
 ```
 
-At this point you should be able to use `wemo` and `wemo server` so long as
-you've activated your environment with `source ouimeaux-env/bin/activate`.
-
-**Note:** Ensure that the `pip` and `virtualenv` command you use belongs to a
-Python 2 installation. On some systems, there are multiple versions of Python
-installed. See below for an example from my Fedora system.
-
-```
-$ /bin/ls -1 "$(dirname $(which python))/virtualenv"{,-2} "$(dirname $(which python))/p"{ython,ip}[23]
-/usr/bin/pip2
-/usr/bin/pip3
-/usr/bin/python2
-/usr/bin/python3
-/usr/bin/virtualenv
-/usr/bin/virtualenv-2
-
-$ pip --version
-pip 9.0.1 from /usr/lib/python3.5/site-packages (python 3.5)
-
-$ pip2 --version
-pip 9.0.1 from /usr/lib/python2.7/site-packages (python 2.7)
-```
+Note, if you install into a virtual environment as above, you'll need to have
+activated your environment with `source ouimeaux-env/bin/activate` in order to
+use `wemo`.
 
 ## HTTP client version
 
