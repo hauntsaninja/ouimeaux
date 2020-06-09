@@ -3,7 +3,7 @@
 Open source control for Belkin WeMo devices
 
 * Free software: BSD license
-* Documentation: http://ouimeaux.rtfd.org.
+* Documentation: http://ouimeaux.rtfd.org
 
 ## Features
 
@@ -12,16 +12,6 @@ Open source control for Belkin WeMo devices
 * REST API to obtain information and perform actions on devices
 * Simple responsive Web app provides device control on mobile
 * Python API to interact with device at a low level
-
-## About this fork
-
-The original repository can be found here: https://github.com/iancmcc/ouimeaux
-
-It doesn't appear to be maintained and it doesn't work with modern Python
-packages.
-
-It has been forked here so that I can include my modifications to
-`requirements.txt` as well as document how to use it.
 
 ## Installation
 
